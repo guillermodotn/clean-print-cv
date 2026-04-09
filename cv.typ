@@ -1,0 +1,39 @@
+// =============================================================================
+// clean-print-cv — Entry Point
+// Compile:  typst compile cv.typ
+// Watch:    typst watch cv.typ
+// =============================================================================
+
+#import "cv-template.typ": *
+
+// Load CV data from YAML
+#let data = yaml("cv-data.yaml")
+
+// Apply page setup
+#show: cv-page-setup
+
+// -- Header ------------------------------------------------------------------
+#cv-header(data.personal)
+
+// -- Professional Summary ----------------------------------------------------
+#cv-summary(data.summary)
+
+// -- Professional Experience -------------------------------------------------
+// (Before skills: for senior roles, what you DID matters more than tool lists)
+#cv-experience(data.experience)
+
+// -- Technical Skills --------------------------------------------------------
+// (After experience: acts as an ATS keyword bank, supports the narrative above)
+#cv-skills(data.skills)
+
+// -- Key Projects ------------------------------------------------------------
+#cv-projects(data.projects)
+
+// -- Certifications ----------------------------------------------------------
+#cv-certifications(data.certifications)
+
+// -- Education ---------------------------------------------------------------
+#cv-education(data.education)
+
+// -- Languages ---------------------------------------------------------------
+#cv-languages(data.languages)
