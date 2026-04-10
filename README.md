@@ -2,6 +2,8 @@
 
 A clean, print-friendly CV template for [Typst](https://typst.app). YAML-driven content, zero color fills, works in B&W.
 
+![Preview](thumbnail.png)
+
 ## Features
 
 - **Print-friendly** -- no solid color blocks, minimal ink usage, looks identical in B&W
@@ -10,12 +12,53 @@ A clean, print-friendly CV template for [Typst](https://typst.app). YAML-driven 
 - **ATS-compatible** -- single-column layout, standard section headings, clean PDF output
 - **Self-contained** -- no external Typst packages required
 
-## Quick start
+## Using as a Typst package
+
+### Quick start with `typst init`
+
+The fastest way to get started is using Typst's built-in scaffolding:
+
+```
+typst init @preview/clean-print-cv:0.1.0 my-cv
+cd my-cv
+```
+
+This creates a new directory with `main.typ` and `cv-data.yaml` ready to edit.
+
+### Manual import
+
+In any `.typ` file, import the template and use its functions:
+
+```typ
+#import "@preview/clean-print-cv:0.1.0": *
+
+#let data = yaml("cv-data.yaml")
+
+#show: cv-page-setup
+
+#cv-header(data.personal)
+#cv-summary(data.summary)
+#cv-experience(data.experience)
+#cv-skills(data.skills)
+#cv-projects(data.projects)
+#cv-certifications(data.certifications)
+#cv-education(data.education)
+#cv-languages(data.languages)
+```
+
+Then compile:
+
+```
+typst compile main.typ
+```
+
+## Local development
+
+If you've cloned this repository and want to work on it directly:
 
 1. [Install Typst](https://github.com/typst/typst#installation)
-2. Clone this repo
-3. Edit `cv-data.yaml` with your data
-4. Compile:
+2. Edit `cv-data.yaml` with your data
+3. Compile:
 
 ```
 typst compile cv.typ
@@ -34,10 +77,12 @@ typst watch cv.typ
 | `cv.typ` | Entry point -- compile this. Controls section order. |
 | `cv-template.typ` | The template -- all styling and layout logic. |
 | `cv-data.yaml` | Your CV content. Edit this. |
+| `template/` | Scaffolding files for `typst init`. |
+| `typst.toml` | Package manifest for Typst Universe. |
 
 ## Sections
 
-The template includes these sections, all optional (comment out any line in `cv.typ` to remove):
+The template includes these sections, all optional (comment out any line in your entry point to remove):
 
 - Professional Summary
 - Professional Experience
@@ -47,7 +92,7 @@ The template includes these sections, all optional (comment out any line in `cv.
 - Education
 - Languages (with proficiency dots)
 
-Reorder them by moving lines in `cv.typ`.
+Reorder them by moving lines in your `.typ` file.
 
 ## Customization
 
@@ -82,3 +127,11 @@ set text(font: "New Computer Modern", ...)
 ```
 
 Replace `"New Computer Modern"` with any system font.
+
+## Building the thumbnail
+
+The thumbnail for Typst Universe is generated from the compiled CV. Requires [ImageMagick](https://imagemagick.org/):
+
+```
+make thumbnail
+```
