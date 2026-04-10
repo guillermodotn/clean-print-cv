@@ -4,6 +4,8 @@
 // Watch:    typst watch cv.typ
 // =============================================================================
 
+// If using the published package, replace the import below with:
+// #import "@preview/clean-print-cv:0.1.0": *
 #import "cv-template.typ": *
 
 // Load CV data from YAML
