@@ -1,4 +1,6 @@
 # Typst build outputs
 *.pdf
-*.png
 *.svg
+
+# Thumbnail intermediates (keep thumbnail.png itself)
+thumbnail-*.png
