@@ -1,0 +1,75 @@
+# =============================================================================
+# clean-print-cv — CV Data File
+# Replace this placeholder data with your own!
+# Template: https://github.com/guillermodotn/clean-print-cv
+# =============================================================================
+
+personal:
+  name: "Jane Doe"
+  title: "Software Engineer"
+  email: "jane.doe@example.com"
+  phone: "+1 555 123 4567"
+  location: "San Francisco, CA"
+  linkedin: "in/janedoe"
+  github: "github.com/janedoe"
+  website: ""
+
+summary: >-
+  Software engineer with 5+ years of experience building scalable web
+  applications and cloud-native services. Proficient in Python, TypeScript,
+  and Go. Passionate about clean code, developer experience, and shipping
+  reliable systems.
+
+skills:
+  - category: "Languages"
+    items: ["Python", "TypeScript", "Go", "SQL", "Bash"]
+  - category: "Frameworks"
+    items: ["FastAPI", "React", "Next.js", "Django"]
+  - category: "Infrastructure"
+    items: ["AWS", "Docker", "Kubernetes", "Terraform", "CI/CD"]
+
+experience:
+  - role: "Senior Software Engineer"
+    company: "Acme Corp"
+    location: "San Francisco, CA"
+    period: "2022 — Present"
+    highlights:
+      - "Led migration of monolithic API to microservices, reducing deploy times by 60%"
+      - "Designed and implemented real-time event pipeline processing 2M events/day"
+      - "Mentored 3 junior engineers through structured onboarding program"
+
+  - role: "Software Engineer"
+    company: "Startup Inc"
+    location: "Remote"
+    period: "2019 — 2022"
+    highlights:
+      - "Built customer-facing dashboard used by 10K+ monthly active users"
+      - "Implemented CI/CD pipeline reducing release cycle from 2 weeks to daily"
+      - "Contributed to open-source libraries with 500+ GitHub stars"
+
+projects:
+  - name: "Open Source CLI Tool"
+    url: "github.com/janedoe/cli-tool"
+    description: >-
+      A command-line tool for automating common development workflows.
+      Built with Go, 200+ stars on GitHub.
+
+certifications:
+  - name: "AWS Solutions Architect — Associate"
+    issuer: "Amazon Web Services"
+    year: "2023"
+
+education:
+  - degree: "B.S. Computer Science"
+    institution: "University of California, Berkeley"
+    location: "Berkeley, CA"
+    period: "2015 — 2019"
+    details: ""
+
+languages:
+  - language: "English"
+    level: "Native"
+    dots: 5
+  - language: "Spanish"
+    level: "Conversational"
+    dots: 3
