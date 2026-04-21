@@ -1,12 +1,10 @@
 // =============================================================================
 // clean-print-cv — Entry Point
-// Compile:  typst compile cv.typ
-// Watch:    typst watch cv.typ
+// Compile:  typst compile main.typ
+// Watch:    typst watch main.typ
 // =============================================================================
 
-// If using the published package, replace the import below with:
-// #import "@preview/clean-print-cv:0.1.0": *
-#import "cv-template.typ": *
+#import "@preview/clean-print-cv:0.1.0": *
 
 // Load CV data from YAML
 #let data = yaml("cv-data.yaml")

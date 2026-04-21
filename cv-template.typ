@@ -7,8 +7,8 @@
 //          Muted metadata, generous whitespace (Chirpy blog style).
 // Palette: HR/recruiter-optimized monochromatic deep blue.
 // Data:    YAML-driven — edit cv-data.yaml, not this file.
-// Usage:   #import "cv-template.typ": *
-// Compile: typst compile cv.typ
+// Usage:   #import "@preview/clean-print-cv:0.1.0": *
+// Compile: typst compile main.typ
 // =============================================================================
 
 // ---------------------------------------------------------------------------
@@ -301,7 +301,7 @@
 #let cv-page-setup(body) = {
   set document(
     title: "Curriculum Vitae",
-    author: "DevOps Engineer",
+    author: "",
   )
   set page(
     paper: "a4",
